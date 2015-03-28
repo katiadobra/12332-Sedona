@@ -7,7 +7,7 @@
     // console.log(controls[i]);
 
     var control = controls[i];
-    console.log(control);
+    // console.log(control);
     if (control.classList.contains('plus')) {
 
       control.addEventListener('click', onPlusClicked);
@@ -27,8 +27,15 @@
 
 
   function onCounterChange(event) {
-    console.log(this);
-    console.log(this.value);
+    // console.log(this);
+    // console.log(this.value);
+
+    var value = parseInt(this.value);
+    if (isNaN(value) || value < 0) {
+      value = 0;
+    }
+    this.value = value;
+    console.log(value);
   }
 
 
@@ -54,7 +61,7 @@
 
     var input = this.parentNode.querySelector('input'),
         value = parseInt(input.value);
-    if (!isNaN(value) & !value <= 0) {
+    if (!isNaN(value) && value > 0) {
       value = value - 1;
     } else {
       value = 0;
