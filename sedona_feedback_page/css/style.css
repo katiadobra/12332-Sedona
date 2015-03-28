@@ -501,12 +501,12 @@ body {
 .counter-action:hover {
   background-color: #e5e5e5;
 }
-.counter-action.plus {
+.counter-action.minus {
   background-image: url(img/ico-action-minus.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.counter-action.minus {
+.counter-action.plus {
   background-image: url(img/ico-action-plus.png);
   background-repeat: no-repeat;
   background-position: center;
