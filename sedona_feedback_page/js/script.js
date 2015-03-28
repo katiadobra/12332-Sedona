@@ -33,7 +33,10 @@
     var value = parseInt(this.value);
     if (isNaN(value) || value < 0) {
       value = 0;
+    } else if (value > 20) {
+      value = 20;
     }
+
     this.value = value;
     // console.log(value);
   }
@@ -42,7 +45,7 @@
   function onPlusClicked(event) {
     event.preventDefault();
 
-    console.log(this);
+    // console.log(this);
     var parent = this.parentNode,
         input = parent.querySelector('input'),
         value = parseInt(input.value);
