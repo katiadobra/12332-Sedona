@@ -1,7 +1,7 @@
 (function() {
 
   var controls = document.querySelectorAll('.counter-action');
-  var counters = document.querySelector('.counter-input');
+  var counters = document.querySelectorAll('.counter-input');
 
   for (var i = controls.length - 1; i >= 0; i--) {
     // console.log(controls[i]);
