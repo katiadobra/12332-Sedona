@@ -35,7 +35,7 @@
       value = 0;
     }
     this.value = value;
-    console.log(value);
+    // console.log(value);
   }
 
 
