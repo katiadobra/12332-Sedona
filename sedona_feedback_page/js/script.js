@@ -1,7 +1,7 @@
 (function() {
 
   var controls = document.querySelectorAll('.counter-action');
-  var counter = document.querySelector('.counter-input');
+  var counters = document.querySelector('.counter-input');
 
   for (var i = controls.length - 1; i >= 0; i--) {
     // console.log(controls[i]);
@@ -18,7 +18,12 @@
   };
 
 
-  counter.addEventListener('change', onCounterChange);
+  for (var i = counters.length - 1; i >= 0; i--) {
+    var counter = counters[i];
+
+    counter.addEventListener('change', onCounterChange);
+  };
+
 
 
   function onCounterChange(event) {
@@ -34,7 +39,7 @@
     var parent = this.parentNode,
         input = parent.querySelector('input'),
         value = parseInt(input.value);
-    if (!isNaN(value)) {  
+    if (!isNaN(value)) {
       value = value + 1;
     } else {
       value = 0;
@@ -43,12 +48,12 @@
     input.value = value;
   }
 
+
   function onMinusClicked(event) {
     event.preventDefault();
 
-    var parent = this.parentNode,
-      input = parent.querySelector('input');
-      value = parseInt(input.value);
+    var input = this.parentNode.querySelector('input'),
+        value = parseInt(input.value);
     if (!isNaN(value) & !value <= 0) {
       value = value - 1;
     } else {
